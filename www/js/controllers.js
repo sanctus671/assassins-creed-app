@@ -40,7 +40,7 @@ angular.module('app.controllers', [])
         var autoplay = $scope.state === 2 ? "" : "autoplay"
         
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + " controls>";
+            var v = "<video " + autoplay + ">";
             v += "<source  src='" + video + "' type='video/mp4'>";
             v += "</video>";
             $timeout(function(){
