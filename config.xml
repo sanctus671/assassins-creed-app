@@ -22,6 +22,7 @@
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
 	<preference name="AllowInlineMediaPlayback" value="true" />
+	<preference name="MediaPlaybackRequiresUserAction" value="false" />
 	
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="15" />

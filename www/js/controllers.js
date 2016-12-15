@@ -1,10 +1,10 @@
 angular.module('app.controllers', [])
 
 .controller('ScanCtrl', function($scope, $timeout) {
-    $scope.videos = {main:"video/main.mp4",
-                     scanner:"video/scanner.mp4",
-                     assassin:"video/assassin.mp4",
-                     templar:"video/templar.mp4"};
+    $scope.videos = {main:"videos/main.mp4",
+                     scanner:"videos/scanner.mp4",
+                     assassin:"videos/assassin.mp4",
+                     templar:"videos/templar.mp4"};
     $scope.state = 1;  
     $scope.isScanning = false;
     
@@ -40,8 +40,8 @@ angular.module('app.controllers', [])
         var autoplay = $scope.state === 2 ? "" : "autoplay"
         
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + " src='" + video + "' webkit-playsinline playsinline>";
-            v += "Your browser does not support the video tag";
+            var v = "<video " + autoplay + " webkit-playsinline playsinline>";
+            v += "<source src='" + video + "' type='video/mp4'>";
             v += "</video>";
             $timeout(function(){
                 document.querySelector("#videoArea").innerHTML = v;
