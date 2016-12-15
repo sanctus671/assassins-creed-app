@@ -33,6 +33,8 @@
 	<gap:plugin name="ionic-plugin-keyboard" source="npm"/>	
 
 	<gap:plugin name="cordova-plugin-device" source="npm" />
+        
+        <gap:plugin name="cordova-plugin-media" source="npm" />
 	
 
        
