@@ -1,9 +1,9 @@
 angular.module('app.controllers', [])
 
 .controller('ScanCtrl', function($scope, $timeout) {
-    $scope.videos = {main:"videos/Main.mp4",
+    $scope.videos = {main:"videos/main.mp4",
                      scanner:"videos/scanner.mp4",
-                     assassin:"videos/Assassin.mp4",
+                     assassin:"videos/assassin.mp4",
                      templar:"videos/templar.mp4"};
     $scope.state = 1;  
     $scope.isScanning = false;
