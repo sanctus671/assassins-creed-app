@@ -40,12 +40,12 @@ angular.module('app.controllers', [])
         var autoplay = $scope.state === 2 ? "" : "autoplay"
         
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + " webkit-playsinline playsinline>";
-            v += "<source src='" + video + "' type='video/mp4'>";
+            var v = "<video " + autoplay + " src='" + video + "' webkit-playsinline playsinline>";
+            v += "Your browser does not support the video tag";
             v += "</video>";
             $timeout(function(){
                 document.querySelector("#videoArea").innerHTML = v;
-            },1000);
+            });
         }
         
     }     
