@@ -40,10 +40,12 @@ angular.module('app.controllers', [])
         var autoplay = $scope.state === 2 ? "" : "autoplay"
         
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + ">";
+            var v = "<video " + autoplay + " webkit-playsinline playsinline>";
             v += "<source src='" + video + "' type='video/mp4'>";
             v += "</video>";
-            $timeout(function(){document.querySelector("#videoArea").innerHTML = v;});
+            $timeout(function(){
+                document.querySelector("#videoArea").innerHTML = v;
+            },1000);
         }
         
     }     
