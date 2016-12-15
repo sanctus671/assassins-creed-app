@@ -43,7 +43,7 @@ angular.module('app.controllers', [])
             var v = "<video " + autoplay + ">";
             v += "<source src='" + video + "' type='video/mp4'>";
             v += "</video>";
-            document.querySelector("#videoArea").innerHTML = v;
+            $timeout(function(){document.querySelector("#videoArea").innerHTML = v;});
         }
         
     }     
