@@ -37,10 +37,10 @@ angular.module('app.controllers', [])
             
         }
         
-        var autoplay = $scope.state === 2 ? "" : "autoplay"
-        
+        var autoplay = $scope.state === 2 ? "" : "autoplay";
+        var poster = $scope.state === 2 ? "img/scan.jpg" : "";
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + " preload='auto' webkit-playsinline playsinline controls='false'>";
+            var v = "<video " + autoplay + " preload='auto' webkit-playsinline playsinline controls='false' poster='" + poster + "'>";
             v += "<source  src='" + video + "' type='video/mp4'>";
             v += "</video>";
             document.querySelector("#videoArea").innerHTML = v;
