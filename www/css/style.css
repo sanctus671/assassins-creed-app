@@ -3,12 +3,13 @@ ion-nav-bar{
 }
 
 ion-content{
-        background-color: #000;
+        background-color: transparent;
         text-align:center;
 }
 
 #videoArea{
-
+    width: 100%;
+    height: 100%;
 }
 
 video{
@@ -21,4 +22,5 @@ video{
     background-color: black;   
         min-width: 100%;
         max-width:100%;
+        z-index:-100;
 }

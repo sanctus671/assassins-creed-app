@@ -9,12 +9,12 @@ angular.module('app.controllers', [])
     $scope.isScanning = false;
     
     $scope.changeState = function(){
+        if ($scope.isScanning){return;}
         $scope.state = $scope.state > 3 ? 1 : $scope.state + 1;
         $scope.updateVideo();
     }
     
     $scope.updateVideo = function(){
-        if ($scope.isScanning){return;}
         var video = $scope.videos.main;
         if ($scope.state === 2){
             video = $scope.videos.scanner;
@@ -40,12 +40,10 @@ angular.module('app.controllers', [])
         var autoplay = $scope.state === 2 ? "" : "autoplay"
         
         if ($scope.state !== 3){
-            var v = "<video " + autoplay + " webkit-playsinline>";
+            var v = "<video " + autoplay + " preload='auto' webkit-playsinline>";
             v += "<source  src='" + video + "' type='video/mp4'>";
             v += "</video>";
-            $timeout(function(){
-                document.querySelector("#videoArea").innerHTML = v;
-            });
+            document.querySelector("#videoArea").innerHTML = v;
         }
         
     }     
