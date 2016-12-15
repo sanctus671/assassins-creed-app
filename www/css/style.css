@@ -24,3 +24,7 @@ video{
         max-width:100%;
         z-index:-100;
 }
+
+video::-webkit-media-controls {
+    display:none !important;
+}
