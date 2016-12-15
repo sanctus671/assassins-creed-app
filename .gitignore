@@ -1,0 +1,15 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+platforms/
+plugins/
+/scss
+/nbproject
+/www/img/adam.jpg
+/www/img/ben.png
+/www/img/ionic.png
+/www/img/max.png
+/www/img/mike.png
+/www/img/perry.png
+/www/lib/ionic/scss
